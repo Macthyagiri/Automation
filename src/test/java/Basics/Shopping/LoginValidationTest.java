@@ -41,7 +41,7 @@ public class LoginValidationTest extends BaseTest{
 		String userid="",password="Test@1034";
 		GetProduct getProdustList=landinPage.loginApplication(userid, password);
 		String emailR=driver.findElement(By.xpath("//div[@class='invalid-feedback']/child::div")).getText();
-		AssertJUnit.assertEquals(emailR, "Email is required");
+		AssertJUnit.assertEquals(emailR, "*Email is required");
 		}
     
     
