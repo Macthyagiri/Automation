@@ -2,6 +2,7 @@ D:\CI-CD\SeleniumDemo\src\test\java\Basics\data\DataReader.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\Shopping\AddToCartValidation.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\Shopping\Login.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\Shopping\LoginValidationTest.java
+D:\CI-CD\SeleniumDemo\src\test\java\Basics\Shopping\OrderHistory.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\Shopping\SubmitOrderTest.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\TestComponents\Listeners.java
 D:\CI-CD\SeleniumDemo\src\test\java\Basics\TestComponents\Retry.java

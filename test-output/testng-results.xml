@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="1" total="5" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-24T13:29:22 IST" name="Suite" finished-at="2025-06-24T13:29:42 IST" duration-ms="20249">
+  <suite started-at="2025-07-01T18:59:20 IST" name="Default suite" finished-at="2025-07-01T18:59:27 IST" duration-ms="7369">
     <groups>
-      <group name="purchase">
-        <method signature="SubmitOrderTest.flipCart(java.util.HashMap)[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" name="flipCart" class="Basics.Shopping.SubmitOrderTest"/>
-      </group> <!-- purchase -->
     </groups>
-    <test started-at="2025-06-24T13:29:22 IST" name="Test2" finished-at="2025-06-24T13:29:32 IST" duration-ms="9985">
-      <class name="Basics.Shopping.LoginValidationTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:22 IST" name="launchApp" finished-at="2025-06-24T13:29:27 IST" duration-ms="4945" status="PASS">
+    <test started-at="2025-07-01T18:59:20 IST" name="Default test" finished-at="2025-07-01T18:59:27 IST" duration-ms="7369">
+      <class name="Basics.Shopping.OrderHistory">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:20 IST" name="launchApp" finished-at="2025-07-01T18:59:23 IST" duration-ms="3304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method retried="true" signature="loginValidationTest()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:27 IST" name="loginValidationTest" finished-at="2025-06-24T13:29:27 IST" duration-ms="416" status="SKIP">
+        <test-method signature="getOrderHistory(java.util.HashMap)[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:23 IST" name="getOrderHistory" data-provider="getData" finished-at="2025-07-01T18:59:24 IST" duration-ms="729" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getOrderHistory -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:24 IST" name="closeDriver" finished-at="2025-07-01T18:59:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:24 IST" name="launchApp" finished-at="2025-07-01T18:59:26 IST" duration-ms="2111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="getOrderHistory(java.util.HashMap)[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:26 IST" name="getOrderHistory" data-provider="getData" finished-at="2025-07-01T18:59:27 IST" duration-ms="962" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829bfb, email=testtestt6809@gmail.com}]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected:<*Email is required> but was:<Email is required>]]>
+              <![CDATA[expected [685a59a50e7068d39829bfb] but found [685a59a50e7068d39829b5fb]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<*Email is required> but was:<Email is required>
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
-at Basics.Shopping.LoginValidationTest.loginValidationTest(LoginValidationTest.java:44)
+              <![CDATA[java.lang.AssertionError: expected [685a59a50e7068d39829bfb] but found [685a59a50e7068d39829b5fb]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at Basics.Shopping.OrderHistory.getOrderHistory(OrderHistory.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -40,111 +67,29 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginValidationTest -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:27 IST" name="closeDriver" finished-at="2025-06-24T13:29:27 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- getOrderHistory -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.OrderHistory@36fc695d]" started-at="2025-07-01T18:59:27 IST" name="closeDriver" finished-at="2025-07-01T18:59:27 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:27 IST" name="launchApp" finished-at="2025-06-24T13:29:31 IST" duration-ms="3840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="loginValidationTest()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:31 IST" name="loginValidationTest" finished-at="2025-06-24T13:29:32 IST" duration-ms="448" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected:<*Email is required> but was:<Email is required>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<*Email is required> but was:<Email is required>
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:115)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:125)
-at Basics.Shopping.LoginValidationTest.loginValidationTest(LoginValidationTest.java:44)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:833)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidationTest -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.LoginValidationTest@1b410b60]" started-at="2025-06-24T13:29:32 IST" name="closeDriver" finished-at="2025-06-24T13:29:32 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-      </class> <!-- Basics.Shopping.LoginValidationTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2025-06-24T13:29:22 IST" name="Test1" finished-at="2025-06-24T13:29:42 IST" duration-ms="20249">
-      <class name="Basics.Shopping.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:22 IST" name="launchApp" finished-at="2025-06-24T13:29:27 IST" duration-ms="4593" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="flipCart(java.util.HashMap)[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:27 IST" name="flipCart" data-provider="getData" finished-at="2025-06-24T13:29:33 IST" duration-ms="5701" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Test@1034, product=ZARA COAT 3, email=testtestt6809@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flipCart -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:33 IST" name="closeDriver" finished-at="2025-06-24T13:29:33 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:33 IST" name="launchApp" finished-at="2025-06-24T13:29:38 IST" duration-ms="4829" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method signature="flipCart(java.util.HashMap)[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:38 IST" name="flipCart" data-provider="getData" finished-at="2025-06-24T13:29:42 IST" duration-ms="4743" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Test@1034, product=ADIDAS ORIGINAL, email=testtestt6809@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flipCart -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Basics.Shopping.SubmitOrderTest@21be3395]" started-at="2025-06-24T13:29:42 IST" name="closeDriver" finished-at="2025-06-24T13:29:42 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-      </class> <!-- Basics.Shopping.SubmitOrderTest -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Suite -->
+      </class> <!-- Basics.Shopping.OrderHistory -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

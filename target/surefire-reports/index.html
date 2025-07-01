@@ -50,12 +50,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\CI-CD\SeleniumDemo\testSuites\ErrorLogin.xml</span>
+                    <span>D:\CI-CD\SeleniumDemo\testSuites\VerifyOrder.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Basics.Shopping.AddToCartValidation" class="method navigator-link" hash-for-method="addToCartValidation">addToCartValidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Basics.Shopping.OrderHistory" class="method navigator-link" hash-for-method="getOrderHistory({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmai...)">getOrderHistory({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmai...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Basics.Shopping.LoginValidationTest" class="method navigator-link" hash-for-method="loginValidationTest">loginValidationTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="Basics.Shopping.OrderHistory" class="method navigator-link" hash-for-method="getOrderHistory({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@...)">getOrderHistory({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,29 +126,23 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Basics.Shopping.AddToCartValidation</span>
+              <span class="class-name">Basics.Shopping.OrderHistory</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addToCartValidation">
-                  </a> <!-- addToCartValidation -->
-                  <span class="method-name">addToCartValidation</span>
+                  <a name="getOrderHistory({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmai...)">
+                  </a> <!-- getOrderHistory({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmai...) -->
+                  <span class="method-name">getOrderHistory</span>
+                  <span class="parameters">({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Basics.Shopping.LoginValidationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginValidationTest">
-                  </a> <!-- loginValidationTest -->
-                  <span class="method-name">loginValidationTest</span>
+                  <a name="getOrderHistory({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@...)">
+                  </a> <!-- getOrderHistory({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@...) -->
+                  <span class="method-name">getOrderHistory</span>
+                  <span class="parameters">({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmail.com})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -156,26 +150,21 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\CI-CD\SeleniumDemo\testSuites\ErrorLogin.xml</span>
+            <span class="header-content">D:\CI-CD\SeleniumDemo\testSuites\VerifyOrder.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Basics.TestComponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ordercheck&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Basics.Shopping.LoginValidationTest&quot;/&gt;
+      &lt;class name=&quot;Basics.Shopping.OrderHistory&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;Basics.Shopping.AddToCartValidation&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test2 --&gt;
+  &lt;/test&gt; &lt;!-- ordercheck --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,10 +176,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test2 (1 class)</span>
+                <span class="test-name">ordercheck (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -218,18 +204,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addToCartValidation')
-data.setCell(0, 2, 'Basics.Shopping.AddToCartValidation')
-data.setCell(0, 3, 3747);
+data.setCell(0, 1, 'getOrderHistory')
+data.setCell(0, 2, 'Basics.Shopping.OrderHistory')
+data.setCell(0, 3, 996);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginValidationTest')
-data.setCell(1, 2, 'Basics.Shopping.LoginValidationTest')
-data.setCell(1, 3, 1786);
+data.setCell(1, 1, 'getOrderHistory')
+data.setCell(1, 2, 'Basics.Shopping.OrderHistory')
+data.setCell(1, 3, 854);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -255,45 +241,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.LoginValidationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Basics.Shopping.OrderHistory</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.AddToCartValidation</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApp</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.LoginValidationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">loginValidationTest</span>
-                <span class="method-start">6314 ms</span>
+                <span class="method-name">getOrderHistory({password=Test@1034, product=ZARA COAT 3, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@gmai...)</span>
+                <span class="method-start">3746 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.AddToCartValidation</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">addToCartValidation</span>
-                <span class="method-start">7704 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.LoginValidationTest</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">8108 ms</span>
+                <span class="method-start">4605 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Basics.Shopping.AddToCartValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">4606 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getOrderHistory({password=Test@1034, product=ADIDAS ORIGINAL, orderid=685a59a50e7068d39829b5fb, email=testtestt6809@...)</span>
+                <span class="method-start">6199 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">11452 ms</span>
+                <span class="method-start">7197 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

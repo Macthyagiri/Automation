@@ -4,4 +4,5 @@ D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\AddItemToCart.java
 D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\CartItems.java
 D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\GetProduct.java
 D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\LandinPage.java
+D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\PageOrderHistory.java
 D:\CI-CD\SeleniumDemo\src\main\java\Basics\PageObjects\Resource\ExtentReporterNG.java

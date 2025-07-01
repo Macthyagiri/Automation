@@ -38,26 +38,33 @@ public class BaseTest {
 		Properties prop=new Properties();
 		FileInputStream file=new FileInputStream("D://Coding//SeleniumDemo//src//main//java//Basics//PageObjects//Resource//GetProperties.properties");
 		prop.load(file);
-		String browserName=System.getProperty("browser")!=null ? System.getProperty("browser"):prop.getProperty("browser");
-		if(browserName.contains("chrome")) {
-			ChromeOptions options=new ChromeOptions();
-		 WebDriverManager.chromedriver().setup();
-		 if(browserName.contains("headless")) {
-			 options.addArguments("headless");
-		 }
-		  driver=new ChromeDriver(options);
-		  driver.manage().window().setSize(new Dimension(1440,900));
-		 
+		String browserName = System.getProperty("browser") != null
+		        ? System.getProperty("browser").toLowerCase()
+		        : prop.getProperty("browser").toLowerCase();
+
+		    System.out.println("Browser selected: " + browserName);
+
+		    if (browserName.contains("chrome")) {
+		        ChromeOptions options = new ChromeOptions();
+		        WebDriverManager.chromedriver().setup();
+
+		        if (browserName.contains("headless")) {
+		            options.addArguments("headless");
+		        }
+
+		        driver = new ChromeDriver(options);
+		        driver.manage().window().setSize(new Dimension(1440, 900));
+		    } else if (browserName.contains("edge")) {
+		        WebDriverManager.edgedriver().setup();
+		        driver = new EdgeDriver();
+		    } else {
+		        throw new RuntimeException("Unsupported browser: " + browserName);
+		    }
+
+		    driver.manage().window().maximize();
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		    return driver;
 		}
-		else if(browserName.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver=new EdgeDriver();
-		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		return driver;
-		
-	}
 	
 	public List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
 		//read json to string
@@ -81,11 +88,11 @@ public class BaseTest {
 		driver=browse();
 		landinPage=new LandinPage(driver);
 		landinPage.goTo();
-		return landinPage;
+		return landinPage; 
 	}
 	@AfterMethod(alwaysRun=true)
 	public void closeDriver() {
 		//driver.findElement(By.cssSelector(".btnn")).click();
-		//driver.close();
+		driver.close();
 	}
 }
