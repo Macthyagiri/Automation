@@ -3,10 +3,14 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="Basics.TestComponents.Listeners"/>
+
 </listeners>
   <test thread-count="5" name="ordercheck">
     <classes>
+      <class name="Basics.Shopping.LoginValidationTest"/>
       <class name="Basics.Shopping.OrderHistory"/>
+       <class name="Basics.Shopping.AddToCartValidation"/>
+        <class name="Shopping.SubmitOrderTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
